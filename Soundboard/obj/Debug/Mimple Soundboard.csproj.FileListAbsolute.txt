@@ -1,0 +1,11 @@
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\bin\Debug\Soundboard.exe.config
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\bin\Debug\Soundboard.exe
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\bin\Debug\Soundboard.pdb
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\obj\Debug\Soundboard.Main.resources
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\obj\Debug\Soundboard.Properties.Resources.resources
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\obj\Debug\Mimple Soundboard.csproj.GenerateResource.cache
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\obj\Debug\Soundboard.exe
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\obj\Debug\Soundboard.pdb
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\bin\Debug\de\Soundboard.resources.dll
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\obj\Debug\Soundboard.Main.de.resources
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\obj\Debug\de\Soundboard.resources.dll

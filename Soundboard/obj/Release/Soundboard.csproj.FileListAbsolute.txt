@@ -1,0 +1,25 @@
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\bin\Release\EntityFramework.dll
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\bin\Release\EntityFramework.SqlServer.dll
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\bin\Release\NAudio.dll
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\bin\Release\System.Data.SQLite.dll
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\bin\Release\System.Data.SQLite.EF6.dll
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\bin\Release\System.Data.SQLite.Linq.dll
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\bin\Release\EntityFramework.xml
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\bin\Release\EntityFramework.SqlServer.xml
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\bin\Release\NAudio.xml
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\bin\Release\System.Data.SQLite.xml
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\bin\Release\System.Data.SQLite.dll.config
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\obj\Release\Soundboard.csprojAssemblyReference.cache
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\obj\Release\Soundboard.ListElement.resources
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\obj\Release\Soundboard.Main.resources
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\obj\Release\Soundboard.Properties.Resources.resources
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\obj\Release\Soundboard.Main.de.resources
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\obj\Release\Soundboard.csproj.GenerateResource.cache
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\obj\Release\Soundboard.csproj.CopyComplete
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\bin\Release\Mimple Soundboard.exe.config
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\bin\Release\Mimple Soundboard.exe
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\bin\Release\Mimple Soundboard.pdb
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\bin\Release\de\Mimple Soundboard.resources.dll
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\obj\Release\de\Mimple Soundboard.resources.dll
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\obj\Release\Mimple Soundboard.exe
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soundboard\obj\Release\Mimple Soundboard.pdb

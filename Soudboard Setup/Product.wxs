@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="B94BCFF3-0C3B-47A7-9AA2-F07E4006B383" Name="Mimple Soundboard" Language="1033" Version="1.0.0.0" Manufacturer="Mirza Systems" UpgradeCode="86209662-ba55-4b3a-a13f-99341ab6c3de">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+    <Icon Id="icon.ico" SourceFile="Mimple.ico"/>
+    <Property Id="ARPPRODUCTICON" Value="icon.ico" />
+
+    <WixVariable Id="WixUIBannerBmp" Value="Images\installer_top-banner.bmp" />
+    <WixVariable Id="WixUIDialogBmp" Value="Images\installer_background.bmp" />
+
+    <UI Id="WixUI_SkipLicenseAgreement">
+      <UIRef Id="WixUI_InstallDir" />
+
+      <Publish Dialog="InstallDirDlg" Control="Back" Event="NewDialog" Value="WelcomeDlg">1</Publish>
+      <Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="InstallDirDlg">NOT Installed</Publish>
+
+      <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+    </UI>
+
+    <MajorUpgrade DowngradeErrorMessage="Eine neuere Version des Mimple Soundboards ist bereits installiert." />
+    <MediaTemplate EmbedCab="yes"/>
+
+    <Feature Id="ProductFeature" Title="Mimple Soundboard Installer" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+      <ComponentRef Id="ApplicationShortcut" />
+      <ComponentRef Id="ApplicationShortcutDesktop" />
+
+      <ComponentRef Id="x86SQLite.Interop" />
+      <ComponentRef Id="x64SQLite.Interop" />
+      <ComponentRef Id="Soundboard.resources" />
+    </Feature>
+  </Product>
+
+  <!-- ProgramFiles Ordner -->
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="SubFolder" Name="Mirza Systems" >
+          <Directory Id="INSTALLFOLDER" Name="Mimple Soundboard" >
+            <Directory Id="DEFOLDER" Name="de"/>
+            <Directory Id="X64FOLDER" Name="x64"/>
+            <Directory Id="X86FOLDER" Name="x86"/>
+          </Directory>
+        </Directory>
+      </Directory>
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ApplicationProgramsFolder" Name="Mirza Systems" />
+      </Directory>
+      <Directory Id="DesktopFolder" Name="Desktop" />
+    </Directory>
+  </Fragment>
+
+  <!-- Shortcuts -->
+  <Fragment>
+    <DirectoryRef Id="ApplicationProgramsFolder">
+      <Component Id="ApplicationShortcut" Guid="76E5017E-0285-4229-A18E-9982B660917F">
+        <Shortcut Id="ApplicationStartMenuShortcut" Name="Mimple Soundboard" Description="Ein simples Soundboard" Target="[INSTALLFOLDER]Mimple Soundboard.exe" WorkingDirectory="INSTALLFOLDER" />
+        <RemoveFolder Id="RemoveApplicationProgramsFolder" Directory="ApplicationProgramsFolder" On="uninstall" />
+        <RegistryValue Root="HKCU" Key="Software\Mirza Systems\Mimple Soundboard" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="DesktopFolder">
+      <Component Id="ApplicationShortcutDesktop" Guid="0EF49379-7617-44E3-9F1C-B3D12A1B000C">
+        <Shortcut Id="ApplicationDesktopShortcut" Name="Mimple Soundboard" Description="Ein simples Soundboard" Target="[INSTALLFOLDER]Mimple Soundboard.exe" WorkingDirectory="INSTALLFOLDER" />
+        <RemoveFolder Id="RemoveDesktopFolder" Directory="DesktopFolder" On="uninstall" />
+        <RegistryValue Root="HKCU" Key="Software\Mirza Systems\Mimple Soundboard" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+
+  <!-- Alle Dateien -->
+  <Fragment>
+    <DirectoryRef Id="X86FOLDER">
+      <Component Id="x86SQLite.Interop" Guid="3EBD462F-3030-431B-8B58-2EE450D5319A">
+        <File Id="x86SQLite.Interop.dll" Source="..\Soundboard\bin\Release\x86\SQLite.Interop.dll" KeyPath="yes" Checksum="yes"/>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="X64FOLDER">
+      <Component Id="x64SQLite.Interop" Guid="BA7B5C96-CDBE-4E04-82CE-1352E767FF7D">
+        <File Id="x64SQLite.Interop.dll" Source="..\Soundboard\bin\Release\x64\SQLite.Interop.dll" KeyPath="yes" Checksum="yes"/>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="DEFOLDER">
+      <Component Id="Soundboard.resources" Guid="7782D6A6-9A01-478C-9991-D0E3184761C5">
+        <File Id="Soundboard.resources.dll" Source="..\Soundboard\bin\Release\de\Soundboard.resources.dll" KeyPath="yes" Checksum="yes"/>
+      </Component>
+    </DirectoryRef>
+
+    <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+      
+      <Component Id="dllEntityFramework" Guid="41A999DB-EBA4-403B-9A2D-7D33A3C5276C">
+        <File Id="EntityFramework.dll" Source="..\Soundboard\bin\Release\EntityFramework.dll" KeyPath="yes" Checksum="yes"/>
+      </Component>
+      <Component Id="dllEntityFramework.SqlServer" Guid="2DF43CB5-B111-41EE-8B13-7606D082FCE2">
+        <File Id="EntityFramework.SqlServer.dll" Source="..\Soundboard\bin\Release\EntityFramework.SqlServer.dll" KeyPath="yes" Checksum="yes"/>
+      </Component>
+      <Component Id="xmlEntityFramework.SqlServer" Guid="D00D4251-0BDC-4FFC-B113-F99F22DDE7A3">
+        <File Id="EntityFramework.SqlServer.xml" Source="..\Soundboard\bin\Release\EntityFramework.SqlServer.xml" KeyPath="yes" Checksum="yes"/>
+      </Component>
+      <Component Id="xmlEntityFramework" Guid="90DCAD93-86AF-48A0-8787-989F824A9D4C">
+        <File Id="EntityFramework.xml" Source="..\Soundboard\bin\Release\EntityFramework.xml" KeyPath="yes" Checksum="yes"/>
+      </Component>
+      <Component Id="dllNAudio" Guid="5F377580-93CB-42A6-857F-0C50AA533470">
+        <File Id="NAudio.dll" Source="..\Soundboard\bin\Release\NAudio.dll" KeyPath="yes" Checksum="yes"/>
+      </Component>
+      <Component Id="xmlNAudio" Guid="6AFB40A3-6242-4A70-8AB0-5ECCFE5D547D">
+        <File Id="NAudio.xml" Source="..\Soundboard\bin\Release\NAudio.xml" KeyPath="yes" Checksum="yes"/>
+      </Component>
+      <Component Id="exeSoundboard" Guid="CCF3312C-BE16-471F-8AE7-18BBFB9AB1DF">
+        <File Id="Soundboard.exe" Source="..\Soundboard\bin\Release\Soundboard.exe" KeyPath="yes" Checksum="yes"/>
+      </Component>
+      <Component Id="configSoundboard.exe" Guid="D9932926-CB14-4ACA-A7D9-7BD6C83402A0">
+        <File Id="Soundboard.exe.config" Source="..\Soundboard\bin\Release\Soundboard.exe.config" KeyPath="yes" Checksum="yes"/>
+      </Component>
+      <Component Id="pdbSoundboard" Guid="72A03216-E116-4326-B818-B8F71FA4BB8C">
+        <File Id="Soundboard.pdb" Source="..\Soundboard\bin\Release\Soundboard.pdb" KeyPath="yes" Checksum="yes"/>
+      </Component>
+      <Component Id="configSystem.Data.SQLite.dll" Guid="7C1A4860-038A-44AA-B17C-499445B3FBC1">
+        <File Id="System.Data.SQLite.dll.config" Source="..\Soundboard\bin\Release\System.Data.SQLite.dll.config" KeyPath="yes" Checksum="yes"/>
+      </Component>
+      <Component Id="dllSystem.Data.SQLite.EF6" Guid="C8581B38-E256-4EF2-9C4C-8166A7A69FA5">
+        <File Id="System.Data.SQLite.EF6.dll" Source="..\Soundboard\bin\Release\System.Data.SQLite.EF6.dll" KeyPath="yes" Checksum="yes"/>
+      </Component>
+      <Component Id="dllSystem.Data.SQLite.Linq" Guid="F3E0E90C-0134-45C6-86D7-7AFC68B887C8">
+        <File Id="System.Data.SQLite.Linq.dll" Source="..\Soundboard\bin\Release\System.Data.SQLite.Linq.dll" KeyPath="yes" Checksum="yes"/>
+      </Component>
+      <Component Id="xmlSystem.Data.SQLite" Guid="9106BDBD-258A-4EFE-9619-614E5B499EA5">
+        <File Id="System.Data.SQLite.xml" Source="..\Soundboard\bin\Release\System.Data.SQLite.xml" KeyPath="yes" Checksum="yes"/>
+      </Component>
+
+      <!-- FONTS -->
+      <Component Id="TOOLFONTS" Guid="96CD8D54-99CE-4075-926D-C438687C6DD9" >
+        <File Id="Righteous.ttf" TrueType="yes" KeyPath="yes"
+          Source="..\FONTS\Righteous.ttf" />
+        <File Id="TEMPSITC.TTF" TrueType="yes"
+          Source="..\FONTS\TEMPSITC.TTF" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>

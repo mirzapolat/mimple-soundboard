@@ -1,0 +1,2 @@
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soudboard Setup\bin\Release\Soudboard_Setup.msi
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soudboard Setup\bin\Release\Soudboard_Setup.wixpdb

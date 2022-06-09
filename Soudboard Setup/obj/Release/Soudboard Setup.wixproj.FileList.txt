@@ -1,0 +1,6 @@
+obj\Release\Product.wixobj
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soudboard Setup\bin\Release\Soudboard_Setup.msi
+C:\PROJEKTE\VS2019\csharp\source\Soundboard\Soudboard Setup\bin\Release\Soudboard_Setup.wixpdb
+obj\Release\Soudboard Setup.wixproj.BindContentsFileListnull.txt
+obj\Release\Soudboard Setup.wixproj.BindOutputsFileListnull.txt
+obj\Release\Soudboard Setup.wixproj.BindBuiltOutputsFileListnull.txt
